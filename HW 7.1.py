@@ -9,12 +9,12 @@ def cookbook_load(cookbook_name):
             cook_dict[dishes] = list()
             ingr_num = int(f_cook_book.readline())
             for i in range(0, ingr_num):
-                ingedients_dict = {}
+                ingredients_dict = {}
                 ingredient = f_cook_book.readline().split(" | ")
-                ingedients_dict['ingredient_name'] = ingredient[0]
-                ingedients_dict['quantity'] = int(ingredient[1])
-                ingedients_dict['measure'] = ingredient[2].strip()
-                cook_dict[dishes].append(ingedients_dict)
+                ingredients_dict['ingredient_name'] = ingredient[0]
+                ingredients_dict['quantity'] = int(ingredient[1])
+                ingredients_dict['measure'] = ingredient[2].strip()
+                cook_dict[dishes].append(ingredients_dict)
             f_cook_book.readline()
     return cook_dict
 
